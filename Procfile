@@ -1,2 +1,2 @@
 web: gunicorn ipca_app:app
-heroku ps:scale web=1
+ps:scale web=1
