@@ -1,3 +1,1 @@
-web: python ipca_app.py runserver
-
-heroku ps:scale web=1
+web: gunicorn ipca_app:app
