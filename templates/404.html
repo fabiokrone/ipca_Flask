@@ -1,0 +1,7 @@
+{% extends "index.html" %}
+{% block title %}Page Not Found{% endblock %}
+{% block body %}
+  <h1>&nbsp;&nbsp;Página Não Encontrada</h1>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;O que você estava procurando não está aqui.
+  <p><a href="{{ url_for('index') }}">&nbsp;&nbsp;&nbsp;&nbsp;me tire daqui</a>
+{% endblock %}

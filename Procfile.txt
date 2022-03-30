@@ -1,0 +1,3 @@
+heroku ps
+=== web: `bundle exec rails server -p $PORT`
+web.1: up for 2m

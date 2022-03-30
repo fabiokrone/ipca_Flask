@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% block title %}IPCA_A{% endblock %}
+{% block body %}
+  <h1>&nbsp;&nbsp;IPCA acumulado últimos 12 meses</h1>
+  <h3>&nbsp;&nbsp;&nbsp;&nbsp;{{ ipca_12 }}
+  <br><br>
+  
+  <p><a href="{{ url_for('index') }}">&nbsp;&nbsp;voltar</a>
+{% endblock %}

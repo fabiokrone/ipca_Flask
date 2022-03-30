@@ -1,0 +1,51 @@
+{% extends "bootstrap/base.html" %}
+{% block content  %}
+
+<div class="carousel-inner">
+<div class="item active">
+   <img src="/static/images/mcs.jpg" alt="ban" style="width:100%">
+</div>
+
+
+
+<div class="alert alert-info" role="alert">
+   <h4 class="alert-heading">IPCA - Índice Nacional de Preços ao Consumidor Amplo</h4>
+   <p>Índice de preços no consumidor é usado para observar tendências de inflação. É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país, comparando com períodos anteriores.</p>
+   <hr>
+   <p class="mb-0">Nesta oportunidade foi construída uma aplicação web para ler dados de uma planilha e retornar o valor acumulado dos últimos 12 meses.</p>
+   <p class="mb-0">Algumas tecnologias utilizadas nesse projeto: Flask-bootstrap, Python, Pandas.</p>
+</div>
+
+
+<div class="alert alert-gray" role="alert">
+   <h5 class="alert-heading"><b>IPCA últimos 12 meses!</h5></b>
+   <h5>{% for table in tables %}
+   {{ table|safe }}
+   {% endfor %}</h5>
+   
+</div>
+
+<div class="alert alert-gray" role="alert">
+	<h5 class="alert-heading"><b>Acumulado últimos 12 meses:  {{ ipca_12 }} %</h5></b>
+</div>
+
+
+
+<footer class="text-center text-white fixed-bottom" style="background-color: rgba(210,210,210);">
+   <!-- Grid container -->
+   <div class="navbar fixed-bottom"></div>
+   <!-- Grid container -->
+   <!-- Copyright -->
+   <div class="text-center p-3" style="background-color: rgba(210,210,210);">
+      © 2022 Copyright:
+      <a class="text-white" href="https://www.linkedin.com/in/fabiokrone//">Fábio krone</a>
+   </div>
+   <!-- Copyright -->
+</footer>
+
+
+{% endblock %}
+{% block scripts  %}
+{{ super()}}
+<script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js">
+{% endblock %}
