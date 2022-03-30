@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT ipca_app:app
+web: gunicorn ipca_app:app
