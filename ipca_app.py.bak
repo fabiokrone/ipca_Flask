@@ -2,8 +2,8 @@ import pandas as pd
 from flask import Flask, render_template, redirect, session
 from flask_bootstrap import Bootstrap
 
-app = Flask(__name__)
-Bootstrap(app)
+ipca_app = Flask(__name__)
+Bootstrap(ipca_app)
 
 @ipca_app.route('/', methods=("POST", "GET"))
 def index():
@@ -40,13 +40,13 @@ def html_table():
    
 
 
-@app.route('/ipca')
+@ipca_app.route('/ipca')
 def IPCA_A():
     # IPCA
     return render_template('ipca.html', ipca_12=ipca())
 
 
-@app.errorhandler(404)
+@ipca_app.errorhandler(404)
 def page_not_found(e):
     # função que seta o 404 explicitamente
     return render_template('404.html'), 404

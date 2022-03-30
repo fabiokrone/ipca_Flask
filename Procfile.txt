@@ -1,3 +1,1 @@
-web: gunicorn app:app
-
-web: gunicorn run:ipca_app.route
+web: python ipca_app.py runserver
